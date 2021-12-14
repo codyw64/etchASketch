@@ -14,12 +14,17 @@ function createDivs () {
         newDiv.style.height = width + "px";
         container.appendChild(newDiv);
         newDiv.addEventListener('pointerover', (e) => {
-            e.target.style.background = currentColour;
+            if (currentColour == "Rainbow") {
+                let rainColour = "#" + Math.floor(Math.random()*16777215).toString(16);
+                e.target.style.background = rainColour;
+            } else {
+                e.target.style.background = currentColour;
+            }
         });
     }
 }
 function getInput() {
-    if (document.getElementById("mySelect").value) {
+    if (document.getElementById("mySelect").value < 100) {
         input = document.getElementById("mySelect").value;
     } else {
         input = 4;
@@ -33,7 +38,10 @@ function clearGrid() {
 }
 }
 function changeColour() {
+    if (document.getElementById("colourChoice").value == "Random") {
+        currentColour = "#" + Math.floor(Math.random()*16777215).toString(16);
+    } else {
     currentColour = document.getElementById("colourChoice").value;
-    console.log(currentColour);
+    }
 }
 
