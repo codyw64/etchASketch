@@ -7,7 +7,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-body {
+#main {
     display: flex;
     margin: 50px 0 0 0;
     justify-content: center;
@@ -19,4 +19,22 @@ body {
 }
 #getWidth {
     padding: 30px;
+}
+h1 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+body {
+    background-color:lightgray;
+    margin: 0;
+}
+#footer {
+    background-color: lightslategrey;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    padding: 30px;
+    margin: 100px 0 0 0;
 }

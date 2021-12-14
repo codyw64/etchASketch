@@ -8,14 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Etch-A-Sketch!</h1>
+    <div id="main">
+    
+    <br>
     <form id="getWidth">
-        Select the dimensions of the square:<input type="text" id="mySelect"><br>
+        Select the dimensions of the square: <input type="text" id="mySelect"><br>
         <br>
         <input type="button" onclick="getInput()" value="Confirm selection">
         <input type="button" onclick="clearGrid();getInput()" value="Clear the grid">
         <p id="output"></p>
-        </form>
+        <label for="lang">Colour:</label>
+        <select name="languages" id="colourChoice">
+            <option id="red">Red</option>
+            <option id="blue">Blue</option>
+            <option id="green">Green</option>
+            <option id="yellow">Yellow</option>
+        </select>
+        <input type="button" onclick="changeColour()" value="Submit" />
+    </form>
     <div id="container"></div>
     <script src="js-file.js"></script>
+    </div>
+    <div id="footer">Made by Cody Whear for The Odin Project</div>
 </body>
 </html>

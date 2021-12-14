@@ -1,5 +1,6 @@
 document.body.onload = createDivs;
 
+let currentColour = "red";
 let input = 4;
 const container = document.getElementById("container");
 
@@ -13,7 +14,7 @@ function createDivs () {
         newDiv.style.height = width + "px";
         container.appendChild(newDiv);
         newDiv.addEventListener('pointerover', (e) => {
-            e.target.style.background = 'red';
+            e.target.style.background = currentColour;
         });
     }
 }
@@ -30,5 +31,9 @@ function clearGrid() {
         while (element.firstChild) {
         element.removeChild(element.firstChild);
 }
+}
+function changeColour() {
+    currentColour = document.getElementById("colourChoice").value;
+    console.log(currentColour);
 }
 
