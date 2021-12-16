@@ -51,6 +51,8 @@ function changeColour() {
     } else if(document.getElementById("colourChoice").value == "Grayscale") {
         currentColour = document.getElementById("colourChoice").value;
         createDivs();
+    } else if (document.getElementById("colourChoice").value == "Eraser"){
+        currentColour = "lightgray";
     } else { 
         currentColour = document.getElementById("colourChoice").value;
     }

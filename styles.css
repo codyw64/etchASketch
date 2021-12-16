@@ -34,7 +34,9 @@ body {
     background-color: lightslategrey;
     display: flex;
     justify-content: center;
-    width: auto;
+    width: 100%;
     padding: 30px;
     margin: 100px 0 0 0;
+    bottom: 0;
+    position: fixed;
 }
