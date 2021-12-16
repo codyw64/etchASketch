@@ -32,7 +32,7 @@ function createDivs () {
     }
 }
 function getInput() {
-    if (document.getElementById("mySelect").value < 100) {
+    if (document.getElementById("mySelect").value <= 100) {
         input = document.getElementById("mySelect").value;
     } else {
         input = 4;
